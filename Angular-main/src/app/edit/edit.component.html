@@ -1,0 +1,18 @@
+<h1>UPDATE</h1>
+      
+        <form #updat='ngForm' (ngSubmit)='updated(updat.value)'  >
+            <label>NAME</label>
+        <input type="text"  name="name" [(ngModel)]="model.name" placeholder="Please enter your name">
+        <label>EMAIL</label>
+        <input type="Email"  name="Email" [(ngModel)]="model.Email" placeholder="Please enter your Email id">
+        <label>PHONE NUMBER</label>
+        <input type="number" name="number" [(ngModel)]="model.number" placeholder="Please enter your phone number">
+        <label>PASSWORD</label>
+        <input type="Password"  name="Password" [(ngModel)]="model.Password" placeholder="Please enter your password">
+        <label>GENDER</label>
+        <input type="radio"  name="Gender"  [(ngModel)]="model.Gender" value="Male">MALE
+        <input type="radio"  name="Gender"  [(ngModel)]="model.Gender" value="Female">FEMALE
+        <br>
+        <button type="submit"> Update</button>
+        
+        </form>

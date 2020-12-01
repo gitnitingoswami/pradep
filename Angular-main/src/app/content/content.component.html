@@ -1,0 +1,57 @@
+<div class="singup">
+    <form #sing='ngForm' (ngSubmit)='save(sing.value)'>
+        <label>NAME</label>
+    <input type="text" #name="ngModel" name="name" ngModel placeholder="Please enter your name">
+    <label>EMAIL</label>
+    <input type="Email" #Email="ngModel" name="Email" ngModel placeholder="Please enter your Email id">
+    <label>PHONE NUMBER</label>
+    <input type="number" #number="ngModel" name="number" ngModel placeholder="Please enter your phone number">
+    <label>PASSWORD</label>
+    <input type="Password" #Password="ngModel" name="Password" ngModel placeholder="Please enter your password">
+    <label>GENDER</label>
+    <input type="radio"  #Gender="ngModel" name="Gender" ngModel value="Male">MALE
+    <input type="radio" #Gender="ngModel" name="Gender" ngModel value="Female">FEMALE
+    <br>
+    <button type="submit"> Submit</button>
+    
+    </form>
+    
+    
+    
+    
+    </div>-
+    <div class="Output">
+        <table  >
+          <th>Id</th>
+    
+            <th>Name</th>
+            <th>Email</th>
+            <th>Number</th>
+            <th>Gender</th>
+            <th>Edit</th>
+           <th>Delete</th>
+            <tr *ngFor="let item of Data index as i"  >
+    
+               <td>{{i}}</td>
+                <td>{{item.name}}</td>
+                
+                <td>{{item.Email}}</td>
+               
+                <td>{{item.number}}</td>
+               
+               
+                <td>{{item.Gender}}</td>
+                <td><button (click)="edit(i)">EDIT</button></td>
+                <td><button (click)="delete(i)" >Remove</button></td>
+    
+    
+    
+    
+    
+            </tr>
+    
+        </table>
+        
+    
+    
+    </div>
